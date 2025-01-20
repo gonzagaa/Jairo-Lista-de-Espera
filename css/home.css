@@ -276,17 +276,17 @@
     header#home .image img.desktop {
       z-index: 2;
       display: inherit;
-      width: 40%;
+      width: 50%;
       position: absolute;
       top: 5%;
-      right: 8%;
+      right: 3%;
       animation: slow-float-with-scale 15s infinite ease-in-out;
     }
 
     header#home .image img.cachorro {
       top: initial;
       left: initial;
-      width: 33%;
+      width: 37%;
       z-index: 2;
       bottom: -5%;
       right: 22%;
@@ -438,9 +438,35 @@
   }
 }
 
+@media (min-width: 1300px) {
+  header#home .image img.desktop {
+    width: 40%;
+    top: 5%;
+    right: 8%;
+  }
+
+  header#home .image img.cachorro {
+    width: 33%;
+    bottom: -5%;
+    right: 22%;
+  }
+}
+
 @media (min-width: 1700px) {
   .wrapper {
     width: min(150rem, 100%);
+  }
+
+  header#home .image img.desktop {
+    width: 40%;
+    top: 5%;
+    right: 8%;
+  }
+
+  header#home .image img.cachorro {
+    width: 33%;
+    bottom: -5%;
+    right: 22%;
   }
 }
 
