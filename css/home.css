@@ -193,6 +193,48 @@
   }
 }
 
+@media (min-width: 650px) and (min-height: 400px) {
+    #home::after {
+      display: none;
+    }
+
+    #home .image img.mobile {
+      display: none;
+    }
+
+    header#home .image img.desktop {
+      z-index: 2;
+      display: inherit;
+      width: 42%;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      mask-image: linear-gradient(to bottom, #000 90%, transparent);
+      right: 2%;
+    }
+
+    header#home .content {
+      text-align: center;
+      align-items: center;
+
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+    }
+
+    header#home .text {
+      margin-top: initial;
+      margin-bottom: initial;
+
+      text-align: left;
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+
+      position: relative;
+      z-index: 2;
+    }
+}
+
 @media (min-width: 1080px) {
   header#home {
     justify-content: center;
@@ -320,7 +362,7 @@
     }
 
     header#home .image img.pilares {
-      width: 20%;
+      width: 30%;
       right: 0;
       top: -5%;
       z-index: 1;
