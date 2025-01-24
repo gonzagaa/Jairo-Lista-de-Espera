@@ -54,6 +54,7 @@
   }
 
   #home h2 {
+    display: none;
     color: #fff;
     font-family: 'Paralucent-ExtraLight', sans-serif;
     text-transform: uppercase;
@@ -93,7 +94,7 @@
   #home h1 {
     color: var(--color-text);
     line-height: 1;
-    font-size: 2.5rem;
+    font-size: 2.7rem;
 
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -133,18 +134,10 @@
 #home .image img.mobile {
   z-index: 2;
   position: absolute;
-  top: 45%;
-  left: 54%;
-  transform: translate(-50%, -57%);
-  width: 130%;
-}
-
-#home .image img.cachorro {
-  position: absolute;
-  width: 75%;
-  z-index: 2;
-  top: 16%;
-  left: -10%;
+  top: 2%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 120%;
 }
 
 #home .image img.bg {
@@ -182,7 +175,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, #020100eb 40%, #00000000);
+  background: linear-gradient(to top, #020100 45%, #00000000);
   z-index: 2;
 }
 
@@ -190,8 +183,14 @@
   display: none;
 }
 
-@media (min-width: 768px) {
-
+@media (min-width: 650px) {
+  #home .image img.mobile {
+    z-index: 2;
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    width: 80%;
+  }
 }
 
 @media (min-width: 1080px) {
@@ -276,22 +275,12 @@
     header#home .image img.desktop {
       z-index: 2;
       display: inherit;
-      width: 60%;
+      width: 42%;
       position: absolute;
-      bottom: 0;
-      right: -2%;
-      animation: slow-float-with-scale 15s infinite ease-in-out;
-    }
-
-    header#home .image img.cachorro {
-      top: initial;
-      left: initial;
-      width: 47%;
-      z-index: 2;
-      bottom: -5%;
-      right: 16%;
-
-      animation: cachorro 15s infinite ease-in-out;
+      top: 50%;
+      transform: translate(0, -50%);
+      mask-image: linear-gradient(to bottom, #000 90%, transparent);
+      right: 2%;
     }
 
     header#home .image img.bg {
@@ -389,6 +378,7 @@
       }
 
       header#home h2 {
+        display: inherit;
         font-size: 1.4rem;
         letter-spacing: 9px;
         background: linear-gradient(145deg, #f2faff 65%, #ffe1a0);
@@ -438,31 +428,23 @@
   }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1200px) {
   header#home .image img.desktop {
-    width: 50%;
+    width: 35%;
     bottom: 0;
-    right: 3%;
-  }
+    right: 8%;
 
-  header#home .image img.cachorro {
-    width: 37%;
-    bottom: -5%;
-    right: 22%;
+    top: initial;
+    transform: initial;
+    mask-image: initial;
   }
 }
 
 @media (min-width: 1500px) {
   header#home .image img.desktop {
-    width: 40%;
+    width: 35%;
     bottom: 0;
-    right: 8%;
-  }
-
-  header#home .image img.cachorro {
-    width: 33%;
-    bottom: -5%;
-    right: 22%;
+    right: 12%;
   }
 }
 
@@ -472,23 +454,12 @@
   }
 
   header#home .image img.desktop {
-    width: 40%;
+    width: 38%;
     bottom: 0;
-    right: 8%;
-  }
-
-  header#home .image img.cachorro {
-    width: 33%;
-    bottom: -5%;
-    right: 22%;
+    right: 11%;
   }
 }
 
-@media (min-width: 2000px) {
-  header#home .circle {
-    top: 1080px;
-  }
-}
 
 @keyframes slow-float-with-scale {
   0% {
@@ -505,27 +476,6 @@
   }
   80% {
     transform: translate(3px, 2px) scale(1.01);
-  }
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-}
-
-@keyframes cachorro {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-  20% {
-    transform: translate(0, -5px) scale(1.01);
-  }
-  40% {
-    transform: translate(0, -16px) scale(1.03);
-  }
-  60% {
-    transform: translate(0, -5px) scale(1.01);
-  }
-  80% {
-    transform: translate(0, -16px) scale(1.03);
   }
   100% {
     transform: translate(0, 0) scale(1);
