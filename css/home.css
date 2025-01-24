@@ -359,6 +359,9 @@
       left: initial;
       z-index: 1;
       transform: initial;
+
+      mask-image: linear-gradient(to bottom, #000 40%, transparent);
+
     }
 
     header#home .image img.pilares {
@@ -368,6 +371,9 @@
       z-index: 1;
     
       transform: rotate(10deg);
+
+      mask-image: linear-gradient(to bottom, #000 40%, transparent);
+
     }
 
     header#home .content {
