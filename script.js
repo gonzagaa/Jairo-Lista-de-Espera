@@ -112,3 +112,15 @@ document.getElementById('leadForm').addEventListener('submit', function (e) {
   });
 });
 
+// document.addEventListener("DOMContentLoaded", function() {
+//   const iframe = document.getElementById("panda-d085627b-eb70-4cf7-a1ce-6210b7ca1096");
+  
+//   // Verifica se a largura da janela é maior que 1080px
+//   if (window.innerWidth > 1080) {
+//     // Adiciona o parâmetro ?muted=1 ou &muted=1 conforme a existência de outros parâmetros na URL
+//     const originalSrc = iframe.src;
+//     const hasQuery = originalSrc.includes("?");
+//     const newSrc = originalSrc + (hasQuery ? "&muted=1" : "?muted=1");
+//     iframe.src = newSrc;
+//   }
+// });
