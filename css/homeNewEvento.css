@@ -72,8 +72,6 @@
     background: linear-gradient(145deg, #fff7e4 65%, #fff1d9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    text-transform: uppercase;
   }
   
   #home h1 span {
