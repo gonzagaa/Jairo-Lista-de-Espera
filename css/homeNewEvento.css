@@ -89,15 +89,16 @@
   }
 
   #home p:nth-child(3) {
-    margin-top: 1rem;
-    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    font-size: 1.7rem;
   }
 
-  #home p:nth-child(3) span:nth-child(2) {
+  #home h3 {
     font-family: "Paralucent-Medium", sans-serif;
     background: var(--gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 2.2rem;
   }
   
   #home p span {
