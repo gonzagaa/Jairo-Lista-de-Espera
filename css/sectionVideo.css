@@ -78,6 +78,10 @@
         padding-bottom: 8rem;
     }
 
+    section#video iframe {
+        display: none !important;
+    }
+
     section#video img.arrow {
         width: 20%;
         top: 1%;

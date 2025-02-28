@@ -96,6 +96,9 @@ document.getElementById('leadForm').addEventListener('submit', function (e) {
     if (response.ok) {
       alert('Cadastro enviado com sucesso!');
       e.target.reset(); // Limpa o formulário
+
+      // Redireciona o usuário para o YouTube Live
+      window.location.href = 'https://youtube.com/live/HTO-9c7TkPA';
     } else {
       response.json().then(error => {
         console.error('Erro:', error);
