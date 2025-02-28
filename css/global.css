@@ -20,7 +20,7 @@
     --primary-color: #F8A120;
     --secondy-color: #FCCC6E;
     --orange-black: #170E00;
-    --gradient: linear-gradient(45deg, #F8A120 0%, #FCCC6E 100%);
+    --gradient: linear-gradient(45deg, #f89320 0%, #fcb04c 100%);
     --bg-black: #0b0b0b;
 
     --nav-height: 7.2rem;
@@ -47,6 +47,20 @@ html {
     text-align: center;
     background-color: var(--black-900);
 
+  }
+
+  #contagem {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  @media (min-width: 1080px) {
+    #contagem {
+      left: 70%;
+      transform: translate(-50%, -50%);
+    }
   }
 
   body {
@@ -105,13 +119,13 @@ html {
 
   @media (min-width: 1080px) {
     .wrapper {
-      width: min(112rem, 100%);
+      width: min(110rem, 100%);
     }
   }
 
   @media (min-width: 1200px) {
     .wrapper {
-      width: min(130rem, 100%);
+      width: min(120rem, 100%);
     }
   }
 
@@ -127,12 +141,12 @@ html {
 
   @media (min-width: 1700px) {
     .wrapper {
-      width: min(160rem, 100%);
+      width: min(140rem, 100%);
     }
   }
   
   section {
-    padding-block: 8rem;
+    padding-block: 2rem;
   }
 
   /*====  scrollbar ============================ */

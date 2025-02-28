@@ -7,38 +7,43 @@ AOS.init(
 );
 
 document.addEventListener("DOMContentLoaded", () => {
-  const openModalButton = document.getElementById("openModal");
+  // Seleciona todos os botões com a classe .openModal
+  const openModalButtons = document.querySelectorAll(".openModal");
   const closeModalButton = document.getElementById("closeModal");
   const modalOverlay = document.getElementById("modalOverlay");
   const modal = modalOverlay.querySelector(".modal");
 
-  // Open modal
-  openModalButton.addEventListener("click", () => {
-    modalOverlay.style.display = "flex";
-    setTimeout(() => {
-      modalOverlay.classList.add("active");
-      modal.classList.add("active");
-    }, 10); // Slight delay to trigger the animation
+  // Percorre todos os botões e adiciona o evento para abrir o modal
+  openModalButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      modalOverlay.style.display = "flex";
+      setTimeout(() => {
+        modalOverlay.classList.add("active");
+        modal.classList.add("active");
+      }, 10); // Pequeno delay para acionar a animação
+    });
   });
 
-  // Close modal on button click
+  // Função para fechar o modal
   const closeModal = () => {
     modalOverlay.classList.remove("active");
     modal.classList.remove("active");
     setTimeout(() => {
       modalOverlay.style.display = "none";
-    }, 300); // Matches the transition duration
+    }, 300); // Tempo compatível com a duração da animação
   };
 
+  // Fecha o modal ao clicar no botão de fechar
   closeModalButton.addEventListener("click", closeModal);
 
-  // Close modal on overlay click
+  // Fecha o modal ao clicar na área de overlay
   modalOverlay.addEventListener("click", (event) => {
     if (event.target === modalOverlay) {
       closeModal();
     }
   });
 });
+
 
   // Função para aplicar a máscara no campo de WhatsApp
   document.getElementById('whatsapp').addEventListener('input', function (e) {

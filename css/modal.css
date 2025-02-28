@@ -112,10 +112,31 @@
     width: 100%;
 }
 
+.modal .video {
+    display: none;
+}
+
 @media (min-width: 1080px) {
     .modal {
-        width: 35%;
+        width: 50%;
         padding: 5rem;
+
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 4rem;
+    } 
+
+    .modal .video {
+        display: inherit;
+
+        width: 100%;
+        border: 2px solid var(--primary-color);
+        border-radius: .5rem;
+    }
+
+    .modal .video iframe {
+        width: 100%;
+        height: 100%;
     }
 
     .modal h2 {
