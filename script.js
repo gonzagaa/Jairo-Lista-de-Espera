@@ -44,27 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-  // Função para aplicar a máscara no campo de WhatsApp
-  document.getElementById('whatsapp').addEventListener('input', function (e) {
-    let input = e.target.value.replace(/\D/g, ''); // Remove tudo que não for número
-
-    if (input.length > 11) input = input.substring(0, 11); // Limita a 11 dígitos
-
-    if (input.length > 6) {
-      // Formato com DDD e 8 ou 9 dígitos
-      input = input.replace(/^(\d{2})(\d{5})(\d{0,4})/, '($1) $2$3');
-    } else if (input.length > 2) {
-      // Formato com DDD e parte do número
-      input = input.replace(/^(\d{2})(\d{0,5})/, '($1) $2');
-    } else {
-      // Apenas DDD
-      input = input.replace(/^(\d{0,2})/, '($1');
-    }
-
-    e.target.value = input;
-  });
-
 document.getElementById('leadForm').addEventListener('submit', function (e) {
   e.preventDefault(); // Impede o envio padrão do formulário
 
